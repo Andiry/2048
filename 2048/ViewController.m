@@ -66,6 +66,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void) updateScore {
+    self.scoreLabel.text = [[NSString alloc] initWithFormat:@"Score: %d", score];
+}
+
 - (void) blankTile:(int)tile {
     UIView *view;
     UILabel *label;
@@ -86,6 +90,9 @@
     }
 
     free = 16;
+    score = 0;
+    [self updateScore];
+    self.finalView.hidden = YES;
 
     [self insertRandomNumber];
     [self insertRandomNumber];
@@ -99,7 +106,8 @@
 
 - (void)insertRandomNumber {
     if (free == 0) {
-        [self initViews];
+        self.finalView.hidden = NO;
+        self.finalScore.text = [[NSString alloc] initWithFormat:@"%d", score];
         return;
     }
     
@@ -215,6 +223,8 @@
         [self assignValueToTile:to :value];
         [self blankTile:from];
         free++;
+        score += (int)pow(2, value);
+        [self updateScore];
     }
 }
 
@@ -247,4 +257,9 @@
     
     [self insertRandomNumber];
 }
+
+- (IBAction)restart:(id)sender {
+    [self initViews];
+}
+
 @end

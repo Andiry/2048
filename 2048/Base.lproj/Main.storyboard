@@ -208,6 +208,39 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddn-x6-cPb">
+                                <rect key="frame" x="96" y="432" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="brd-iS-U14">
+                                <rect key="frame" x="80" y="140" width="160" height="159"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKv-bY-7zo">
+                                        <rect key="frame" x="55" y="113" width="50" height="30"/>
+                                        <state key="normal" title="Restart">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iED-qa-9aC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4am-Dj-f6W">
+                                        <rect key="frame" x="37" y="17" width="87" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-fH-JXU">
+                                        <rect key="frame" x="44" y="63" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.81856364702639528" green="0.93499626000000002" blue="0.71568463462078258" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -219,6 +252,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="finalScore" destination="Mqq-fH-JXU" id="KOC-o8-0WV"/>
+                        <outlet property="finalView" destination="brd-iS-U14" id="kyh-K1-5zg"/>
                         <outlet property="label0" destination="QMz-PJ-hT9" id="BCj-pK-TQt"/>
                         <outlet property="label1" destination="iSN-yr-gi4" id="FfO-ZB-aIU"/>
                         <outlet property="label10" destination="XFF-mE-mo7" id="fgN-94-1V9"/>
@@ -235,6 +270,7 @@
                         <outlet property="label7" destination="cxl-Le-4A0" id="fJI-Ny-eKT"/>
                         <outlet property="label8" destination="duz-Rq-3GP" id="KJ8-g9-OeT"/>
                         <outlet property="label9" destination="DUM-EL-B8V" id="rEE-AB-ZwA"/>
+                        <outlet property="scoreLabel" destination="ddn-x6-cPb" id="1Jb-bo-72P"/>
                         <outlet property="view0" destination="GPM-E6-2rt" id="LOX-fN-Skb"/>
                         <outlet property="view1" destination="mbf-3v-z1P" id="TL8-f4-Hdw"/>
                         <outlet property="view10" destination="PBC-WB-UdF" id="QGP-1l-EjC"/>

@@ -17,6 +17,7 @@
     NSMutableArray *colors;
     int free;
     int values[16]; // log format
+    int score;
 }
 @property (strong, nonatomic) IBOutlet UIView *view0;
 @property (strong, nonatomic) IBOutlet UILabel *label0;
@@ -50,10 +51,14 @@
 @property (strong, nonatomic) IBOutlet UILabel *label14;
 @property (strong, nonatomic) IBOutlet UIView *view15;
 @property (strong, nonatomic) IBOutlet UILabel *label15;
+@property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (strong, nonatomic) IBOutlet UIView *finalView;
+@property (strong, nonatomic) IBOutlet UILabel *finalScore;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;
 - (IBAction)swipeUp:(id)sender;
 - (IBAction)swipeDown:(id)sender;
+- (IBAction)restart:(id)sender;
 
 - (void)initViews;
 - (void) insertRandomNumber;
@@ -62,6 +67,7 @@
 - (void) assignValueToTile:(int)tile :(int)value;
 - (void) processRow:(int)row :(int)direction;
 - (void) processColumn:(int)column :(int)direction;
+- (void) updateScore;
 
 @end
 
